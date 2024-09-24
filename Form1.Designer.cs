@@ -39,9 +39,10 @@
             // 
             // progressBar1
             // 
-            progressBar1.Location = new Point(-7, 425);
+            progressBar1.Location = new Point(-4, 319);
+            progressBar1.Margin = new Padding(3, 2, 3, 2);
             progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(815, 35);
+            progressBar1.Size = new Size(712, 23);
             progressBar1.TabIndex = 0;
             progressBar1.Click += progressBar1_Click;
             // 
@@ -49,9 +50,10 @@
             // 
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox1.Image = Properties.Resources.cachorro;
-            pictureBox1.Location = new Point(612, 243);
+            pictureBox1.Location = new Point(536, 182);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(196, 126);
+            pictureBox1.Size = new Size(172, 94);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -60,9 +62,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(642, 381);
+            label1.Location = new Point(562, 286);
             label1.Name = "label1";
-            label1.Size = new Size(146, 38);
+            label1.Size = new Size(114, 30);
             label1.TabIndex = 2;
             label1.Text = "Loading...";
             // 
@@ -73,14 +75,15 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(700, 338);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(progressBar1);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculadora";
