@@ -119,10 +119,21 @@ namespace Calculadora
             {
                 resultado = valor / valor2;
             }
-            else if (operacao == "*") {
+            else if (operacao == "*")
+            {
                 resultado = valor * valor2;
             }
-            txtResultado.Text = resultado.ToString();
+            txtResultado.Text = resultado.ToString(); // ele converte o resultado de volta para a string ja que antes ele era int para fazer as contas
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            txtResultado.Clear();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
