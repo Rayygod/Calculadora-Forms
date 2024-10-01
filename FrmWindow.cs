@@ -18,7 +18,8 @@ namespace Calculadora
         }
         private double valor = 0;
         private string operacao = "";
-
+        private double celcius = 0;
+        private double fahrenheit = 0;
         private void FrmWindow_Load(object sender, EventArgs e)
         {
 
@@ -102,6 +103,17 @@ namespace Calculadora
             txtResultado.Text += "0";
         }
 
+        private void btnCelcius_Click(object sender, EventArgs e)
+        {
+            valor = double.Parse(txtResultado.Text);
+            operacao = "c";
+        }
+
+        private void btnFahrenheit_Click(object sender, EventArgs e)
+        {
+            valor = double.Parse(txtResultado.Text);
+            operacao = "f";
+        }
         private void button14_Click(object sender, EventArgs e)
         {
             double valor2 = double.Parse(txtResultado.Text); // ele pega o 2 numero que a pessoa digitou
@@ -123,6 +135,14 @@ namespace Calculadora
             {
                 resultado = valor * valor2;
             }
+            else if (operacao == "c")
+            {
+                resultado = (valor - 32) / 1.8;
+            }
+            else if (operacao == "f")
+            {
+                resultado = valor * 1.8 + 32;
+            }
             txtResultado.Text = resultado.ToString(); // ele converte o resultado de volta para a string ja que antes ele era int para fazer as contas
         }
 
@@ -135,5 +155,6 @@ namespace Calculadora
         {
             Application.Exit();
         }
+
     }
 }
