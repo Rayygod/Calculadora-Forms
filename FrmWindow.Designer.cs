@@ -47,8 +47,12 @@
             txtResultado = new TextBox();
             btnExit = new Button();
             button13 = new Button();
-            btnCelcius = new Button();
-            btnFahrenheit = new Button();
+            menuStrip1 = new MenuStrip();
+            conversorToolStripMenuItem = new ToolStripMenuItem();
+            cºParaFºToolStripMenuItem = new ToolStripMenuItem();
+            fºParaCºToolStripMenuItem = new ToolStripMenuItem();
+            cMParaPolegadasToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // button1
@@ -274,7 +278,7 @@
             // 
             btnExit.BackColor = Color.Red;
             btnExit.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExit.Location = new Point(342, 3);
+            btnExit.Location = new Point(354, -1);
             btnExit.Margin = new Padding(3, 4, 3, 4);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(80, 45);
@@ -297,33 +301,43 @@
             button13.UseVisualStyleBackColor = false;
             button13.Click += button13_Click;
             // 
-            // btnCelcius
+            // menuStrip1
             // 
-            btnCelcius.BackColor = Color.Blue;
-            btnCelcius.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
-            btnCelcius.ForeColor = Color.White;
-            btnCelcius.Location = new Point(133, 537);
-            btnCelcius.Margin = new Padding(3, 4, 3, 4);
-            btnCelcius.Name = "btnCelcius";
-            btnCelcius.Size = new Size(66, 69);
-            btnCelcius.TabIndex = 18;
-            btnCelcius.Text = "Cº";
-            btnCelcius.UseVisualStyleBackColor = false;
-            btnCelcius.Click += btnCelcius_Click;
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { conversorToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(429, 28);
+            menuStrip1.TabIndex = 20;
+            menuStrip1.Text = "menuStrip1";
             // 
-            // btnFahrenheit
+            // conversorToolStripMenuItem
             // 
-            btnFahrenheit.BackColor = Color.Blue;
-            btnFahrenheit.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
-            btnFahrenheit.ForeColor = Color.White;
-            btnFahrenheit.Location = new Point(235, 537);
-            btnFahrenheit.Margin = new Padding(3, 4, 3, 4);
-            btnFahrenheit.Name = "btnFahrenheit";
-            btnFahrenheit.Size = new Size(66, 69);
-            btnFahrenheit.TabIndex = 19;
-            btnFahrenheit.Text = "Fº";
-            btnFahrenheit.UseVisualStyleBackColor = false;
-            btnFahrenheit.Click += btnFahrenheit_Click;
+            conversorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cºParaFºToolStripMenuItem, fºParaCºToolStripMenuItem, cMParaPolegadasToolStripMenuItem });
+            conversorToolStripMenuItem.Name = "conversorToolStripMenuItem";
+            conversorToolStripMenuItem.Size = new Size(89, 24);
+            conversorToolStripMenuItem.Text = "Conversor";
+            // 
+            // cºParaFºToolStripMenuItem
+            // 
+            cºParaFºToolStripMenuItem.Name = "cºParaFºToolStripMenuItem";
+            cºParaFºToolStripMenuItem.Size = new Size(224, 26);
+            cºParaFºToolStripMenuItem.Text = "Cº para Fº";
+            cºParaFºToolStripMenuItem.Click += cºParaFºToolStripMenuItem_Click;
+            // 
+            // fºParaCºToolStripMenuItem
+            // 
+            fºParaCºToolStripMenuItem.Name = "fºParaCºToolStripMenuItem";
+            fºParaCºToolStripMenuItem.Size = new Size(224, 26);
+            fºParaCºToolStripMenuItem.Text = "Fº para Cº";
+            fºParaCºToolStripMenuItem.Click += fºParaCºToolStripMenuItem_Click;
+            // 
+            // cMParaPolegadasToolStripMenuItem
+            // 
+            cMParaPolegadasToolStripMenuItem.Name = "cMParaPolegadasToolStripMenuItem";
+            cMParaPolegadasToolStripMenuItem.Size = new Size(224, 26);
+            cMParaPolegadasToolStripMenuItem.Text = "CM para Polegadas";
+            cMParaPolegadasToolStripMenuItem.Click += cMParaPolegadasToolStripMenuItem_Click;
             // 
             // FrmWindow
             // 
@@ -332,8 +346,6 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(429, 600);
-            Controls.Add(btnFahrenheit);
-            Controls.Add(btnCelcius);
             Controls.Add(button13);
             Controls.Add(btnExit);
             Controls.Add(txtResultado);
@@ -352,12 +364,16 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
             Margin = new Padding(3, 4, 3, 4);
             Name = "FrmWindow";
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmWindow";
             Load += FrmWindow_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -382,7 +398,10 @@
         private TextBox txtResultado;
         private Button btnExit;
         private Button button13;
-        private Button btnCelcius;
-        private Button btnFahrenheit;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem conversorToolStripMenuItem;
+        private ToolStripMenuItem cºParaFºToolStripMenuItem;
+        private ToolStripMenuItem fºParaCºToolStripMenuItem;
+        private ToolStripMenuItem cMParaPolegadasToolStripMenuItem;
     }
 }

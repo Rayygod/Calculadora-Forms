@@ -103,16 +103,22 @@ namespace Calculadora
             txtResultado.Text += "0";
         }
 
-        private void btnCelcius_Click(object sender, EventArgs e)
+        private void cºParaFºToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            valor = double.Parse(txtResultado.Text);
+            operacao = "f";
+        }
+
+        private void fºParaCºToolStripMenuItem_Click(object sender, EventArgs e)
         {
             valor = double.Parse(txtResultado.Text);
             operacao = "c";
         }
 
-        private void btnFahrenheit_Click(object sender, EventArgs e)
+        private void cMParaPolegadasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             valor = double.Parse(txtResultado.Text);
-            operacao = "f";
+            operacao = "cm";
         }
         private void button14_Click(object sender, EventArgs e)
         {
@@ -142,6 +148,10 @@ namespace Calculadora
             else if (operacao == "f")
             {
                 resultado = valor * 1.8 + 32;
+            }
+            else if (operacao == "cm")
+            {
+                resultado = valor / 2.54;
             }
             txtResultado.Text = resultado.ToString(); // ele converte o resultado de volta para a string ja que antes ele era int para fazer as contas
         }
