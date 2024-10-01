@@ -16,6 +16,7 @@ namespace Calculadora
         {
             InitializeComponent();
         }
+        // criação das variaveis
         private double valor = 0;
         private string operacao = "";
         private double celcius = 0;
@@ -106,13 +107,13 @@ namespace Calculadora
         private void cºParaFºToolStripMenuItem_Click(object sender, EventArgs e)
         {
             valor = double.Parse(txtResultado.Text);
-            operacao = "f";
+            operacao = "c";
         }
 
         private void fºParaCºToolStripMenuItem_Click(object sender, EventArgs e)
         {
             valor = double.Parse(txtResultado.Text);
-            operacao = "c";
+            operacao = "f";
         }
 
         private void cMParaPolegadasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -124,7 +125,7 @@ namespace Calculadora
         {
             double valor2 = double.Parse(txtResultado.Text); // ele pega o 2 numero que a pessoa digitou
             double resultado = 0; // aqui é a variavel que vai ser usada para exibir o resultado vou usar ela la embaixo
-
+            // aqui ele faz um if verificando cada operação para depois fazer o calculo
             if (operacao == "+")
             {
                 resultado = valor + valor2;
@@ -158,13 +159,13 @@ namespace Calculadora
 
         private void button13_Click(object sender, EventArgs e)
         {
+            // quando ele clicar no botão CLS ele apaga o que esta escrito no textbox()
             txtResultado.Clear();
         }
-
-        private void btnExit_Click(object sender, EventArgs e)
+        private void FrmWindow_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // quando ele clicar no botão "X" ele fecha tudo
             Application.Exit();
         }
-
     }
 }

@@ -45,7 +45,6 @@
             button15 = new Button();
             button16 = new Button();
             txtResultado = new TextBox();
-            btnExit = new Button();
             button13 = new Button();
             menuStrip1 = new MenuStrip();
             conversorToolStripMenuItem = new ToolStripMenuItem();
@@ -274,19 +273,6 @@
             txtResultado.Size = new Size(385, 63);
             txtResultado.TabIndex = 15;
             // 
-            // btnExit
-            // 
-            btnExit.BackColor = Color.Red;
-            btnExit.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExit.Location = new Point(354, -1);
-            btnExit.Margin = new Padding(3, 4, 3, 4);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(80, 45);
-            btnExit.TabIndex = 16;
-            btnExit.Text = "Exit";
-            btnExit.UseVisualStyleBackColor = false;
-            btnExit.Click += btnExit_Click;
-            // 
             // button13
             // 
             button13.BackColor = Color.Blue;
@@ -321,21 +307,21 @@
             // cºParaFºToolStripMenuItem
             // 
             cºParaFºToolStripMenuItem.Name = "cºParaFºToolStripMenuItem";
-            cºParaFºToolStripMenuItem.Size = new Size(224, 26);
+            cºParaFºToolStripMenuItem.Size = new Size(220, 26);
             cºParaFºToolStripMenuItem.Text = "Cº para Fº";
             cºParaFºToolStripMenuItem.Click += cºParaFºToolStripMenuItem_Click;
             // 
             // fºParaCºToolStripMenuItem
             // 
             fºParaCºToolStripMenuItem.Name = "fºParaCºToolStripMenuItem";
-            fºParaCºToolStripMenuItem.Size = new Size(224, 26);
+            fºParaCºToolStripMenuItem.Size = new Size(220, 26);
             fºParaCºToolStripMenuItem.Text = "Fº para Cº";
             fºParaCºToolStripMenuItem.Click += fºParaCºToolStripMenuItem_Click;
             // 
             // cMParaPolegadasToolStripMenuItem
             // 
             cMParaPolegadasToolStripMenuItem.Name = "cMParaPolegadasToolStripMenuItem";
-            cMParaPolegadasToolStripMenuItem.Size = new Size(224, 26);
+            cMParaPolegadasToolStripMenuItem.Size = new Size(220, 26);
             cMParaPolegadasToolStripMenuItem.Text = "CM para Polegadas";
             cMParaPolegadasToolStripMenuItem.Click += cMParaPolegadasToolStripMenuItem_Click;
             // 
@@ -347,7 +333,6 @@
             BackgroundImageLayout = ImageLayout.Zoom;
             ClientSize = new Size(429, 600);
             Controls.Add(button13);
-            Controls.Add(btnExit);
             Controls.Add(txtResultado);
             Controls.Add(button14);
             Controls.Add(button15);
@@ -371,6 +356,7 @@
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmWindow";
+            FormClosed += FrmWindow_FormClosed;
             Load += FrmWindow_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -396,7 +382,6 @@
         private Button button15;
         private Button button16;
         private TextBox txtResultado;
-        private Button btnExit;
         private Button button13;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem conversorToolStripMenuItem;
