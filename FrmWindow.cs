@@ -144,17 +144,17 @@ namespace Calculadora
             }
             else if (operacao == "c")
             {
-                resultado = (valor - 32) / 1.8;
+                resultado = valor * 1.8 + 32;
             }
             else if (operacao == "f")
             {
-                resultado = valor * 1.8 + 32;
+                resultado = (valor - 32) / 1.8;
             }
             else if (operacao == "cm")
             {
                 resultado = valor / 2.54;
             }
-            txtResultado.Text = resultado.ToString(); // ele converte o resultado de volta para a string ja que antes ele era int para fazer as contas
+            txtResultado.Text = resultado.ToString(); // ele converte o resultado de volta para a string ja que antes ele era double para fazer as contas
         }
 
         private void button13_Click(object sender, EventArgs e)
